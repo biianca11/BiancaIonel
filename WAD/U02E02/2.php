@@ -8,9 +8,21 @@
 <body>
     <?php
 
-$meals = array($days=>'Monday', 'Tuesday' , $food=>'Pasta', 'Chicken');
-foreach ($days as $food => $meals) {
-echo "The day $days you will eat $meals <br>";
+    $meals =[
+
+        "Monday" => "Carbonara",
+        "Tuesday" => "Tacos",
+        "Wednesday" => "Pizza",
+        "Thursday" => "Fish",
+        "Friday" => "Shushi",
+        "Saturday" => "Salad",
+        "Sunday" => "Rice",
+
+    ];
+
+
+foreach ($meals as $key => $value) {
+echo "The day $key you will eat $value <br>";
 }
 
     ?>
