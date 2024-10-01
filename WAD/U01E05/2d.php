@@ -17,12 +17,17 @@
          $studentMarks[$student[$i]]=$studentM;
      }
      $student="luis";
-     $total=0;
-     foreach ($studentMarks[$student] as $student => $value) {
-         $total+= $value;
+     if (isset($studentMarks[$student])) {
+        foreach ($studentMarks[$student] as $key => $value) {
+            echo "The mark for $key is: " . $value ."<\n";
+     }
     }
-    $avg=$sum/$cont($studentMarks[$student]);
-    echo "the average of $student is " .$avg. "\n";
+    else {
+        echo "the student don't exist";
+    }
+
+
+
     ?>
 </body>
 </html>
