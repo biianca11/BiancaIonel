@@ -22,10 +22,10 @@
         <mxCell id="12" value="TIENDA" style="rounded=1;fillColor=#FF0080;strokeColor=#b85450;fontStyle=1;fontFamily=Tahoma;fontSize=14" parent="1" vertex="1">
           <mxGeometry x="489.9999999999999" y="335.5" width="190" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="25" value="MAQUILLAJE" style="rounded=1;fillColor=#FF66B3;strokeColor=#FF0080;fontStyle=1;fontFamily=Tahoma;fontSize=14;fontColor=#ffffff;" parent="1" vertex="1">
+        <mxCell id="25" value="MAQUILLAJE" style="rounded=1;fillColor=#FF66B3;strokeColor=#FF0080;fontStyle=1;fontFamily=Tahoma;fontSize=14;fontColor=#212121;" parent="1" vertex="1">
           <mxGeometry x="200" y="455.5" width="130" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="29" value="PIEL" style="rounded=1;fillColor=#FF66B3;strokeColor=#FF0080;fontStyle=1;fontFamily=Tahoma;fontSize=14;fontColor=#ffffff;" parent="1" vertex="1">
+        <mxCell id="29" value="PIEL" style="rounded=1;fillColor=#FF66B3;strokeColor=#FF0080;fontStyle=1;fontFamily=Tahoma;fontSize=14;fontColor=#212121;" parent="1" vertex="1">
           <mxGeometry x="827" y="455.5" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="44" value="COLECCION&#xa;LABIOS" style="rounded=1;fillColor=#FF66B3;gradientColor=none;strokeColor=#FF0080;fontColor=#000000;fontStyle=1;fontFamily=Tahoma;fontSize=14" parent="1" vertex="1">
