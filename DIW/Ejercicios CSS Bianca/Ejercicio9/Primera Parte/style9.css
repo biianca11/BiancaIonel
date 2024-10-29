@@ -1,0 +1,39 @@
+div {
+    border: 1px solid;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    pos
+}
+
+.div1 {
+    width: 650px;
+    height: 650px;
+}
+ p.caja {
+    margin: -4px 
+ }
+
+
+.fila1 {
+    width: calc(33% - 21px);
+    height: 30%;
+    float: left;
+    
+}
+
+.fila2 {
+    width: calc(33% - 21px);
+    background-color: green;
+    height: 30%;
+    float: left;
+    
+}
+
+.fila3 {
+    width: calc(33% - 21px);
+    background-color: blue;
+    height: 30%;
+    float: left;
+    
+}
