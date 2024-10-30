@@ -1,39 +1,40 @@
-div {
-    border: 1px solid;
-    padding: 5px;
-    margin: 5px;
+.contenedor {
+    display:flex;
+    justify-content: center;
     align-items: center;
-    pos
+    height: 100vh;
 }
 
 .div1 {
-    width: 650px;
-    height: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1px 1px;
+    border: 1px solid black;
+    width: 50rem;
+    
 }
  p.caja {
-    margin: -4px 
+    margin: 1px;
  }
 
 
 .fila1 {
-    width: calc(33% - 21px);
-    height: 30%;
-    float: left;
-    
+    margin: 1rem 1rem; 
+    height: 15rem;
+    border:1px solid black; 
 }
 
 .fila2 {
-    width: calc(33% - 21px);
-    background-color: green;
-    height: 30%;
-    float: left;
-    
+    margin: 1rem 1rem;  
+    height: 15rem;
+    border:1px solid black;
+    background-color: green;  
 }
 
 .fila3 {
-    width: calc(33% - 21px);
+    margin: 1rem 1rem;  
+    height: 15rem;
+    border:1px solid black;
     background-color: blue;
-    height: 30%;
-    float: left;
-    
 }
