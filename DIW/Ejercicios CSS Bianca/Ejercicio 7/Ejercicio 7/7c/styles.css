@@ -1,0 +1,18 @@
+body {
+    background-image: url("madrid.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+div {
+    width: 210px;
+    height: 210px;
+    box-shadow: 10px 10px 10px 10px black;
+    overflow: hidden;
+    background-clip: unset;
+}
+
+img {
+    width: 210px;
+    height: 210px;
+}
