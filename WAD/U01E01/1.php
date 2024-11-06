@@ -12,6 +12,7 @@
 
     echo "$var1" . "<br>"; 
     echo $var2;
+
     ?>
 </body>
 </html>

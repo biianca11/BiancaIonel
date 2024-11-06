@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["T-shirt"] = $_POST["T-shirt"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,32 +10,31 @@
     <title>Formulario Sesiones</title>
 </head>
 <body>
-
 <table>
     <tr>
-        <th>T-shirt</th>
+        <th>Jumpers</th>
     </tr>
 
     <tr>
-        <td>Zara</td>
+        <td>Scuffers</td>
     </tr>
 
     <tr>
-        <td>Bershka</td>
+        <td>White Fox</td>
     </tr>
 
     <tr>
-        <td>Pull & Bear</td>
+        <td>Denim & Tears</td>
     </tr>
 </table>
 <br>
         
     
-    <form action="Session2.php" method="post">
-        <label for= "T-shirt" > Select a T-shirt: </label>
-        <input type="text" id="T-shirt" name="T-shirt"></input>
+    <form action="Session3.php" method="post">
+        <label for= "Jumper" > Select a T-shirt: </label>
+        <input type="text" id="Jumper" name="Jumper"></input>
         <input type="submit" value="submit"></input>
     </form>
-
+ 
 </body>
 </html>
