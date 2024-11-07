@@ -6,13 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    $var1="4";
-    $var2='Bianca';
-
-    echo "$var1" . "<br>"; 
-    echo $var2;
-
-    ?>
+<?php 
+  
+  $N = 100; 
+  $sum = 0; 
+    
+  for ($i = 1; $i <= $N; $i++)  
+      $sum = $sum + $i; 
+        
+  echo "Sum of first " . $N .  
+      " Natural Numbers : " . $sum; 
+    
+  ?>
 </body>
 </html>

@@ -7,12 +7,10 @@
 </head>
 <body>
     <?php
-    $var1="4";
-    $var2='Bianca';
-
-    echo "$var1" . "<br>"; 
-    echo $var2;
-
+     $names=["luis","pedro","ramon","ruben","rocio"];
+     $surnames= ["gomez","menendez","sanz","garcia","hernandez"];
+     $result=array_combine($names,$surnames);
+     print _r($result);
     ?>
 </body>
 </html>

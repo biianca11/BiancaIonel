@@ -6,13 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
     $var1="4";
     $var2='Bianca';
 
-    echo "$var1" . "<br>"; 
-    echo $var2;
+    echo "<table border=1 cellspacing=1 cellpadding=1>
+    <tr>  
+       <td>$var1</td> 
+    </tr> 
+    <tr>  
+        <td>$var2</td> 
+    </tr> 
 
-    ?>
+</table>";
+?>
 </body>
 </html>

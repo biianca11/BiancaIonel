@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    $var1="4";
-    $var2='Bianca';
-
-    echo "$var1" . "<br>"; 
-    echo $var2;
-
+<?php
+    $var=5;
+    
+    for ($i=1;$i<=$var;$i++){
+        for ($j=1;$j<=$i;$j++){
+            echo "$j";
+        }
+        echo "<br>";
+    }
     ?>
+    
 </body>
 </html>

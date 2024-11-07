@@ -7,12 +7,13 @@
 </head>
 <body>
     <?php
-    $var1="4";
-    $var2='Bianca';
+    $secret_num= mt_rand (0,100);
 
-    echo "$var1" . "<br>"; 
-    echo $var2;
-
+    for ($i==1;$i<=;$i++)
+    
     ?>
+
+
+
 </body>
 </html>

@@ -7,12 +7,14 @@
 </head>
 <body>
     <?php
-    $var1="4";
-    $var2='Bianca';
-
-    echo "$var1" . "<br>"; 
-    echo $var2;
-
+    $var=7;
+    
+    for ($i=0;$i<$var;$i++){
+        for ($j=0;$j<=$i;$j++){
+            echo "*";
+        }
+        echo "<br>";
+    }
     ?>
 </body>
 </html>
