@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    background-color: bisque;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Estilos del header y subheader */
+.header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    
+}
+
+.subheader {
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 10px;
+    padding: 0fr;
+    justify-content: space-around;
+    background-color: #000;
+    color: white;
+    
+}
+
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.menu, .lupa {
+    width: 30px;
+    height: 20px;
+}
+
+/* Estilos de la sección de producto */
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    padding: 90px;
+    margin-top: 80px; /* espacio para el header */
+}
+
+.product-images {
+    display: flex; /* También puedes usar display: grid */
+    flex-direction: column;
+    gap: 20px; /* Ajusta el espacio entre las imágenes */
+    align-items: center;
+
+}
+
+.product-images img {
+    width: 60%;
+    height: 60%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comprar {
+    width: 20%;
+    padding: 10px;
+    margin: 50px;
+    align-content: center;
+    font-weight: bold;
+    border-radius: 2em;
+    border: none;
+    background-color: white;
+
+}
+
+
+.colors span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0px;
+    justify-content: space-between;
+    margin-right: 5px;
+    cursor: pointer;  
+}
+
+
+.colors .black { background-color: black; }
+.colors .red { background-color: red; }
+.colors .pink { background-color: pink; }
+
+.sizes span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.size {
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
