@@ -7,13 +7,13 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
-
+/* Estilos del header y subheader */
 .header-container {
-    position: sticky; /* Mantener en la parte superior */
+    position: sticky; 
     top: 0;
     width: 100%;
 }
-/* Estilos del header y subheader */
+
 .header {
     display: flex;
     align-items: center;
@@ -25,12 +25,12 @@ body {
 }
 
 .logo {
-    width: 45px; /* Ajustado para mantener proporciones */
+    width: 45px; 
     height: 45px;
 }
 
 .marca {
-    width: 50px; /* Tamaño ajustado */
+    width: 50px; 
     font-family: 'Georgia', serif;
     font-size: 28px;
     white-space: nowrap;
@@ -60,7 +60,7 @@ body {
 }
 
 .subheader p, .subheader img {
-    margin-left: -5px; /* Desplaza el contenido hacia la izquierda */
+    margin-left: -5px; 
     cursor: pointer;
 }
 
@@ -85,16 +85,15 @@ body {
     gap: 0px;
     
     padding: 90px;
-    margin-top: 80px; /* espacio para el header */
+    margin-top: 80px; 
 }
 
 .product-images {
-    display: flex; /* También puedes usar display: grid */
+    display: flex; 
     flex-direction: column;
-    gap: 20px; /* Ajusta el espacio entre las imágenes */
+    gap: 20px; 
     align-items: center;
-    justify-content: center; /* Asegura que esté centrado */
-    
+    justify-content: center; 
 }
 
 .product-images img {
@@ -111,7 +110,7 @@ body {
 }
 
 .product_info .precio {
-    margin-top: -10px; /* Ajusta la distancia con el h1 */
+    margin-top: -10px;
 }
 
 .colores span {
@@ -149,16 +148,16 @@ body {
 }
 
 .contenedor_compra {
-    display: flex; /* Activar flexbox */
-    flex-direction: column; /* Alinear elementos en columna */
-    align-items: center; /* Centrar horizontalmente */
-    gap: 10px; /* Espacio entre el botón y el enlace */
-    margin-top: 70px; /* Separación desde el contenido superior */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 70px;
     margin-left: 297px;
 }
 
 .comprar {
-    width: 200px; /* Definir un ancho fijo */
+    width: 200px; 
     padding: 18px;
     font-weight: bold;
     border-radius: 2em;
@@ -176,10 +175,10 @@ body {
 }
 
 .contenedor_botones {
-    display: flex; /* Activar flexbox */
-    align-items: center; /* Centrar horizontalmente */
-    gap: 10px; /* Espacio entre el botón y el enlace */
-    margin-top: 40px; /* Separación desde el contenido superior */
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 40px; 
     
 
 }
@@ -225,10 +224,11 @@ body {
 .descripcion {
     font-size: 115%;
 }
+
 /* Estilos del footer */
 footer {
-    background-color: #f3efe8; /* Color de fondo claro */
-    color: #000; /* Color de texto negro */
+    background-color: #d1c9bb; 
+    color: #000; 
     text-align: center;
     padding: 40px 20px;
     font-family: Arial, sans-serif;
@@ -236,10 +236,10 @@ footer {
 }
 
 footer hr {
-    width: 85%; /* Más corto */
-    border: 1px solid white; /* Blanco */
+    width: 85%; 
+    border: 1px solid white; 
 }
-/* Logo principal del footer */
+
 .footer-logo {
     font-family: 'Georgia', serif;
     font-size: 50px;
@@ -248,17 +248,17 @@ footer hr {
     
 }
 
-/* Contenedor principal del contenido */
+
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Alinear los elementos a los lados y centro */
-    align-items: center; /* Alinear verticalmente */
+    justify-content: space-between; 
+    align-items: center; 
     max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
 
-/* Redes sociales e información de contacto */
+
 .redes-info {
     flex: 1;
     text-align: left;
@@ -268,19 +268,19 @@ footer hr {
 }
 
 .redes-info .social-icons a img {
-    width: 35px; /* Tamaño de los iconos */
-    margin-right: 10px; /* Espaciado entre iconos */
+    width: 35px; 
+    margin-right: 10px; 
     vertical-align: middle;
 }
 
-/* Logo en el centro */
+
 .logo_contacto {
     flex: 1;
     text-align: center;
 }
 
 .logo_contacto img {
-    width: 80px; /* Tamaño del logo */
+    width: 80px; 
     margin-bottom: 10px;
 }
 
@@ -288,15 +288,13 @@ footer hr {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: transparent; /* Fondo negro */
-    color: #000000; /* Texto blanco */
-    border-radius: 50px; /* Bordes redondeados */
+    background-color: transparent; 
+    color: #000000; 
+    border-radius: 50px; 
     font-size: 14px;
     font-weight: bold;
 }
 
-
-/* Dirección */
 .direccion {
     flex: 1;
     text-align: right;
