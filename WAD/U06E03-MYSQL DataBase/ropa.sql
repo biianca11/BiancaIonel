@@ -30,7 +30,7 @@ CREATE TABLE `calzado` (
   `color` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `marca` (`marca`),
-  CONSTRAINT `calzado_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`) on delete cascade
+  CONSTRAINT `calzado_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -59,7 +59,7 @@ CREATE TABLE `camiseta` (
   `color` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `marca` (`marca`),
-  CONSTRAINT `camiseta_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`) on delete cascade
+  CONSTRAINT `camiseta_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -90,9 +90,9 @@ CREATE TABLE `llevar` (
   KEY `pantalon` (`pantalon`),
   KEY `camiseta` (`camiseta`),
   KEY `calzado` (`calzado`),
-  CONSTRAINT `llevar_ibfk_1` FOREIGN KEY (`pantalon`) REFERENCES `pantalon` (`id`) on delete cascade,
-  CONSTRAINT `llevar_ibfk_2` FOREIGN KEY (`camiseta`) REFERENCES `camiseta` (`id`) on delete cascade,
-  CONSTRAINT `llevar_ibfk_3` FOREIGN KEY (`calzado`) REFERENCES `calzado` (`id`)  on delete cascade,
+  CONSTRAINT `llevar_ibfk_1` FOREIGN KEY (`pantalon`) REFERENCES `pantalon` (`id`),
+  CONSTRAINT `llevar_ibfk_2` FOREIGN KEY (`camiseta`) REFERENCES `camiseta` (`id`),
+  CONSTRAINT `llevar_ibfk_3` FOREIGN KEY (`calzado`) REFERENCES `calzado` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -145,7 +145,7 @@ CREATE TABLE `pantalon` (
   `color` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `marca` (`marca`),
-  CONSTRAINT `pantalon_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`)  on delete cascade
+  CONSTRAINT `pantalon_ibfk_1` FOREIGN KEY (`marca`) REFERENCES `marca` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Ejemplo bases de datos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-<?php
+<body><?php
 /* Conectar a la BD y luego ya actuo siempre sobre la variable conexion*/
 	$conexion = mysqli_connect("localhost","root","","ropa");
 	
@@ -11,7 +13,7 @@
 	mysqli_select_db($conexion,"ropa") or die ("No se puede seleccionar la BD");
 	
 /* Lazo la consulta sobre la BD*/	
-	$resultado = mysqli_query($conexion, "select * from calzado");
+	$resultado = mysqli_query($conexion, "select * from camiseta");
 	
 /* para detectar errores*/
 	if (mysqli_connect_errno()) {
@@ -60,18 +62,15 @@
 
 	</table>
 	<br>
+
 <form action="modify.php" method="post">
-	<input type="text"  name="id" placeholder="id"><br><br>
-	<input type="text"  name="talla" placeholder="talla"><br><br>
-	<input type="text"  name="precio" placeholder="precio"><br><br>
-	<input type="text"  name="marca" placeholder="marca"><br><br>
-	<input type="text"  name="color" placeholder="color"><br><br>
-   	<input type="submit" value="<" name="GoBack" >
+	<label for="talla">Elige una talla<br><br>
+	<input type="number" name="talla" placeholder="talla"><br><br>
+    <input type="submit" value="<" name="GoBack" >
    	<input type="submit" name="Modify" value="Modify" >
 </form>
 
 <?php
-
 if(isset($_POST["GoBack"])) {
 	header("Location: index.php");
 }
@@ -87,16 +86,15 @@ if(isset($_POST["Modify"])){
 	echo $marca;
 	$color = $_POST['color'];
 	echo $color;
-	$consulta="update calzado set talla='$talla', precio='$precio', marca='$marca', color='$color' where id='$id'";
-	$resultado= mysqli_query($conexion, $consulta);
-	if($resultado){
-		echo "Modificado con exito";
-		header ("Location: modify.php");
-	}else{
-		echo "Error al modificar";
-	}
+
+
+    $consulta="select * from camiseta where talla='$talla'";
+
 }
-	mysqli_close($conexion);
+
+
+
+
 ?>
 </body>
 </html>
