@@ -75,20 +75,19 @@
 if(isset($_POST["GoBack"])) {
 	header("Location: index.php");
 }
+
 if(isset($_POST["Modify"])){
 
 	$id = $_POST['id'];
-	echo $id;
 	$talla = $_POST['talla'];
-	echo $talla;
 	$precio = $_POST['precio'];
-	echo $precio;
 	$marca = $_POST['marca'];
-	echo $marca;
 	$color = $_POST['color'];
-	echo $color;
+
+
 	$consulta="update calzado set talla='$talla', precio='$precio', marca='$marca', color='$color' where id='$id'";
 	$resultado= mysqli_query($conexion, $consulta);
+
 	if($resultado){
 		echo "Modificado con exito";
 		header ("Location: modify.php");

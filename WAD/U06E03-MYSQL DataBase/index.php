@@ -30,9 +30,10 @@
 <form action="" method="post">
 <div class="menu">
 	<a href="modify.php"><input type="button" value="Modify Footwear" /></a>
-    <a href="login.php"><input type="button" value="Insert Pants" /></a>
+    <a href="insert.php"><input type="button" value="Insert Pants" /></a>
 	<a href="load.php"><input type="button" value="Load T-shirts" /></a>
-	<a href="login.php"><input type="button" value="Delete Footwear" /></a>
+	<a href="register.php"><input type="button" value="Register Outfit" /></a>
+	<a href="delete.php"><input type="button" value="Delete Footwear" /></a>
 </div>
 </form>
 </body>

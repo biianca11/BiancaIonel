@@ -22,79 +22,79 @@
 	}
 
 /* Devuelve el número de filas del resultado */
-	$numr = mysqli_num_rows($resultado);
-?>
-	<table style="border:1px solid black">
-		<tr>
-			<td>
-				id
-			</td>
-			<td>
-				talla
-			</td>
-			<td>
-				precio
-			</td>
-			<td>
-				marca
-			</td>
-			<td>
-				color
-			</td>
-		</tr>
-		<?php
-			if($numr > 0){
-				for ($i = 0; $i < $numr; $i++){
-					echo "<tr>";
-/* El resultado es realmente una matriz y voy cogiendo por filas con esa función*/					
-					$fila = mysqli_fetch_array($resultado,MYSQLI_ASSOC);
+?>	
+	<h1>Cargar Camisetas por Talla</h1>
 
-/* Para concatenar string utilzo el .*/					
-					echo "<td>".$fila["id"]."</td>";
-					echo "<td>".$fila["talla"]."</td>";
-					echo "<td>".$fila["precio"]."</td>";
-					echo "<td>".$fila["marca"]."</td>";
-					echo "<td>".$fila["color"]."</td>";
-					echo "</tr>";
-				}
-			}
-		?>
-
-	</table>
-	<br>
-
-<form action="modify.php" method="post">
-	<label for="talla">Elige una talla<br><br>
-	<input type="number" name="talla" placeholder="talla"><br><br>
-    <input type="submit" value="<" name="GoBack" >
-   	<input type="submit" name="Modify" value="Modify" >
+<!-- Formulario para seleccionar el tamaño -->
+<form action="load.php" method="POST">
+	<label for="talla">Selecciona la talla:</label>
+	<select name="talla" id="talla" required>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+	</select><br><br>
+	<input type="submit" value="<" name="GoBack" >
+	<input type="submit" value="load">
 </form>
 
 <?php
 if(isset($_POST["GoBack"])) {
 	header("Location: index.php");
 }
-if(isset($_POST["Modify"])){
 
-	$id = $_POST['id'];
-	echo $id;
-	$talla = $_POST['talla'];
-	echo $talla;
-	$precio = $_POST['precio'];
-	echo $precio;
-	$marca = $_POST['marca'];
-	echo $marca;
-	$color = $_POST['color'];
-	echo $color;
+$talla = isset($_POST['talla']) ? $_POST['talla'] : '';
 
+// Verificar que el tamaño no esté vacío
+if (!empty($talla)) {
+    /* Llamar a la base de datos para obtener las camisetas de la talla seleccionada */
+    $consulta = "SELECT * FROM camiseta WHERE talla = '$talla'";
+    $resultado = mysqli_query($conexion, $consulta);
 
-    $consulta="select * from camiseta where talla='$talla'";
-
+    /* Comprobar si la consulta fue exitosa */
+    if ($resultado) {
+        $numr = mysqli_num_rows($resultado);
+        if ($numr > 0) {
+            // Mostrar la tabla con los resultados
+            echo "<h2>Camisetas de la talla $talla</h2>";
+            echo "<table style='border: 1px solid black;'>";
+            echo "<tr>
+                    <td>id</td>
+                    <td>talla</td>
+                    <td>precio</td>
+                    <td>marca</td>
+                    <td>color</td>
+                  </tr>";
+            // Iterar sobre los resultados
+            while ($fila = mysqli_fetch_array($resultado, MYSQLI_ASSOC)) {
+                echo "<tr>";
+                echo "<td>" . $fila["id"] . "</td>";
+                echo "<td>" . $fila["talla"] . "</td>";
+                echo "<td>" . $fila["precio"] . "</td>";
+                echo "<td>" . $fila["marca"] . "</td>";
+                echo "<td>" . $fila["color"] . "</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+        } else {
+            // Si no se encontraron camisetas para esa talla
+            echo "<p>No se encontraron camisetas para la talla seleccionada.</p>";
+        }
+    } else {
+        echo "<p>Error al ejecutar la consulta: " . mysqli_error($conexion) . "</p>";
+    }
+} else {
+    echo "<p>Por favor, selecciona una talla.</p>";
 }
 
-
-
-
+/* Cerrar la conexión a la base de datos */
+mysqli_close($conexion);
 ?>
 </body>
 </html>
