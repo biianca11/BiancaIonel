@@ -45,12 +45,7 @@ body {
 
 .subheader {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px;
-    background-color: black;
-    color: white;
+    
 }
 
 .subheader p, .subheader img {
@@ -122,6 +117,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
     gap: 10px;
 }
 
@@ -138,6 +134,7 @@ body {
 .contenedor_botones {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -184,8 +181,8 @@ footer {
     text-align: center;
 }
 
-.logo_contacto{
-    width: 20px ;
+.logo_contacto img{
+    width: 70px ;
 }
 
 .social-icons a img {
@@ -204,24 +201,30 @@ footer {
 }
 
 /* Media Queries */
+// TABLET
 @media (min-width: 768px) {
     .subheader {
-        display: grid;
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .subheader p {
-       display: none;
+        align-items: flex-end;
+        gap: 10px;
+        padding: 10px;
+        background-color: black;
+        color: white;
     }
 
     .subheader #menu {
         float: right;
     }
 
+    .product_info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
     .product {
-        flex-direction: column;
+        flex-direction: row;
         gap: 40px;
     }
 
@@ -244,7 +247,7 @@ footer {
     }
 
     .descripcion {
-        display: none;
+        display: grid;
     }
 
     .contenedor_botones {
@@ -253,37 +256,100 @@ footer {
     }
 
     footer {
-        background-color: #d1c9bb;
-        color: #000;
+        background-color: #d1c9bb; 
+        color: #000; 
         text-align: center;
-        padding: 20px;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        line-height: 3.8;
     
+    }
+
+    footer hr {
+        width: 85%; 
+        border: 1px solid white; 
+    }
+    .footer-logo {
+        font-family: 'Georgia', serif;
+        font-size: 50px;
+        font-weight: 500;
+
     }
 
     .footer-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .redes-info p {
-        display: none;
-
-    }
-    
-    .logo_contacto {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        max-width: 1200px;
+        margin: 0 auto;
         text-align: left;
     }
-
-    .direccion {
-        display: none;
+    .redes-info {
+        display: grid;
+        flex: 1;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
     }
+    .redes-info .social-icons a img {
+        display: grid;
+        width: 35px; 
+        margin-right: 10px; 
+        vertical-align: middle;
+    }
+    .logo_contacto {
+        flex: 1;
+        text-align: center;
+    }
+    .logo_contacto img {
+        width: 80px; 
+        margin-bottom: 10px;
+    }
+ 
+    
 }
 
+
+// ORDENADOR 
 @media (min-width: 1024px) {
-    .product {
-        padding: 40px;
+    .subheader {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px;
+        background-color: black;
+        color: white;
     }
 
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        
+        padding: 90px;
+        margin-top: 80px; 
+    }
+
+    .product-images {
+        display: flex; 
+        flex-direction: column;
+        gap: 20px; 
+        align-items: center;
+        justify-content: center; 
+    }
+    .product-images img {
+        width: 35em;
+        height: 36em;
+    }
+    .product_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 24px;
+    }
     .comprar {
         font-size: 1.2em;
     }
@@ -291,10 +357,77 @@ footer {
     .contenedor_botones button {
         font-size: 1em;
     }
+    footer {
+        background-color: #d1c9bb; 
+        color: #000; 
+        text-align: center;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        line-height: 3.8;
+    
+    }
 
-    .logo_contacto img {
+    footer hr {
+        width: 85%; 
+        border: 1px solid white; 
+    }
+    .footer-logo {
+        font-family: 'Georgia', serif;
+        font-size: 50px;
+        font-weight: 500;
+
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .redes-info {
+        flex: 1;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .redes-info p {
         display: grid;
-        width: 70px; 
+    }
+    .redes-info .social-icons a img {
+        width: 35px; 
+        margin-right: 10px; 
+        vertical-align: middle;
+    }
+    .logo_contacto {
+        flex: 1;
+        text-align: center;
+    }
+    .logo_contacto img {
+        width: 80px; 
         margin-bottom: 10px;
     }
+    .llamada {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: transparent; 
+        color: #000000; 
+        border-radius: 50px; 
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .direccion {
+        display: grid;
+        flex: 1;
+        text-align: right;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-style: italic;
+    }
+
 }
