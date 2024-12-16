@@ -243,7 +243,7 @@ footer {
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
-        align-items: start;
+        align-items: center;
     }
 
     .descripcion {
@@ -284,26 +284,19 @@ footer {
         margin: 0 auto;
         text-align: left;
     }
-    .redes-info {
-        display: grid;
-        flex: 1;
-        text-align: left;
-        font-size: 14px;
-        font-weight: bold;
-        font-style: italic;
-    }
-    .redes-info .social-icons a img {
+    .social-icons {
         display: grid;
         width: 35px; 
         margin-right: 10px; 
-        vertical-align: middle;
+        
     }
+    
     .logo_contacto {
         flex: 1;
         text-align: center;
     }
     .logo_contacto img {
-        width: 80px; 
+        width: 100px; 
         margin-bottom: 10px;
     }
  
@@ -364,53 +357,61 @@ footer {
         padding: 40px 20px;
         font-family: Arial, sans-serif;
         line-height: 3.8;
-    
     }
-
+    
     footer hr {
         width: 85%; 
         border: 1px solid white; 
     }
+    
     .footer-logo {
         font-family: 'Georgia', serif;
         font-size: 50px;
         font-weight: 500;
-
+        
+        
     }
-
+    
+    
     .footer-content {
         display: flex;
+        flex-direction: row;
         justify-content: space-between; 
-        align-items: center; 
+        align-items: start; 
         max-width: 1200px;
         margin: 0 auto;
         text-align: left;
     }
+    
+    
     .redes-info {
+        display: grid;
         flex: 1;
         text-align: left;
         font-size: 14px;
         font-weight: bold;
         font-style: italic;
     }
-
-    .redes-info p {
-        display: grid;
-    }
-    .redes-info .social-icons a img {
+    
+    .social-icons img {
         width: 35px; 
         margin-right: 10px; 
         vertical-align: middle;
     }
+    
+    
     .logo_contacto {
         flex: 1;
         text-align: center;
     }
+    
     .logo_contacto img {
-        width: 80px; 
+        width: 120px; 
         margin-bottom: 10px;
     }
+    
     .llamada {
+        display: grid;
         display: inline-block;
         margin-top: 10px;
         padding: 10px 20px;
@@ -420,6 +421,7 @@ footer {
         font-size: 14px;
         font-weight: bold;
     }
+    
     .direccion {
         display: grid;
         flex: 1;
@@ -429,5 +431,4 @@ footer {
         font-weight: bold;
         font-style: italic;
     }
-
 }
