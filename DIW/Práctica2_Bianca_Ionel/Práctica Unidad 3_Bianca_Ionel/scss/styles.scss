@@ -1,0 +1,437 @@
+$primary-color: rgb(192, 176, 162);
+$secondary-color: #d1c9bb;
+$special-color: pink;
+
+
+
+@mixin flexbox($direction: row, $justify: flex-start, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$font-size: 30px;
+
+h1 {
+    @if $font-size > 10px {
+      font-size: $font-size;
+      color: purple;
+    } 
+  }
+
+body {
+    background-color: $primary-color;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+// Header 
+.header-container {
+    position: sticky; 
+    top: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.header {
+    @include flexbox(row, space-between, center);
+    padding: 10px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.marca {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+}
+
+.iconos {
+    display: flex;
+    gap: 10px;
+}
+
+.icono {
+    width: 25px;
+    height: 25px;
+}
+
+.subheader {
+    display: none;
+    
+}
+
+.subheader p, .subheader img {
+    cursor: pointer;
+}
+
+// Producto
+.product {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.product-images {
+    @include flexbox(column, flex-start, center);
+    gap: 10px;
+}
+
+.product-images img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.product-images #img2 {
+    display: none;
+}
+
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.product_info h1 {
+    background-color: $special-color;
+}
+.colores span, .tallas span {
+    font-weight: bold;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.colores .black { background-color: black; }
+.colores .red { background-color: red; }
+.colores .pink { background-color: pink; }
+
+.tallas span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.talla {
+    padding: 8px 10px;
+    
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenedor_compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.comprar {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.contenedor_botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contenedor_botones button {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    color: #A0522D;
+    cursor: pointer;
+}
+
+.descripcion {
+    display: none;
+}
+
+// Footer 
+footer {
+    background-color: $secondary-color;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-logo {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.redes-info {
+    display: none;
+
+}
+
+.direccion {
+    display: none;
+    text-align: center;
+}
+
+.logo_contacto img{
+    width: 70px ;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin-right: 5px;
+}
+
+.llamada {
+    display: none;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #000;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+// Media Queries 
+// TABLET
+@media (min-width: 768px) {
+    .subheader {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .subheader #menu {
+        float: right;
+    }
+    .product {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .product-images {
+        @include flexbox(row, space-between, start);
+        flex: 1;
+    }
+
+    .product-images #img2 {
+        display: grid;
+        width: 20em;
+    }
+
+    .product_info {
+        @include flexbox(column, space-between, start);
+        flex: 1;
+        gap: 15px;
+    }
+    .product_info h1 {
+        background-color: $special-color;
+    }
+    .contenedor_botones {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .descripcion {
+        display: grid;
+    }
+
+    footer {
+        background-color: #d1c9bb; 
+        color: #000; 
+        text-align: center;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        line-height: 3.8;
+    
+    }
+
+    footer hr {
+        width: 85%; 
+        border: 1px solid white; 
+    }
+    .footer-logo {
+        font-family: 'Georgia', serif;
+        font-size: 50px;
+        font-weight: 500;
+
+    }
+
+    .footer-content {
+        @include flexbox(column, space-between, center);
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .social-icons {
+        display: grid;
+        width: 35px; 
+        margin-right: 10px; 
+        
+    }
+    
+    .logo_contacto {
+        flex: 1;
+        text-align: center;
+    }
+    .logo_contacto img {
+        width: 100px; 
+        margin-bottom: 10px;
+    }
+ 
+    
+}
+
+// ORDENADOR 
+@media (min-width: 1024px) {
+    .subheader {
+        @include flexbox(row, flex-end, flex-end);
+        gap: 10px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px;
+        padding: 90px;
+        margin-top: 80px; 
+    }
+
+    .product-images {
+        @include flexbox(column, center, center);
+        gap: 20px; 
+    }
+    .product-images img {
+        width: 35em;
+        height: 36em;
+    }
+    .product_info {
+        @include flexbox(column, flex-start,flex-start);
+        gap: 24px;
+    }
+    .product_info h1 {
+        background-color: $special-color;
+    }
+    .comprar {
+        font-size: 1.2em;
+    }
+
+    .contenedor_botones button {
+        font-size: 1em;
+    }
+    .descripcion {
+        display: grid;
+        background-color: $secondary-color;
+    }
+    footer {
+        background-color: #d1c9bb; 
+        color: #000; 
+        text-align: center;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        line-height: 3.8;
+    }
+    
+    footer hr {
+        width: 85%; 
+        border: 1px solid white; 
+    }
+    
+    .footer-logo {
+        font-family: 'Georgia', serif;
+        font-size: 50px;
+        font-weight: 500;
+    }
+    
+
+    .footer-content {
+        @include flexbox(row, space-between,start);
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    
+    
+    .redes-info {
+        display: grid;
+        flex: 1;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .social-icons img {
+        width: 35px; 
+        margin-right: 10px; 
+        vertical-align: middle;
+    }
+    
+    
+    .logo_contacto {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .logo_contacto img {
+        width: 120px; 
+        margin-bottom: 10px;
+    }
+    
+    .llamada {
+        display: grid;
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: transparent; 
+        color: #000000; 
+        border-radius: 50px; 
+        font-size: 14px;
+        font-weight: bold;
+    }
+    
+    .direccion {
+        display: grid;
+        flex: 1;
+        text-align: right;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-style: italic;
+    }
+}
