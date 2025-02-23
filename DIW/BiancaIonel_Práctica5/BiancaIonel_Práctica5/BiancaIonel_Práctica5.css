@@ -1,0 +1,30 @@
+body { 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    background-color: beige;
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 100px); 
+    gap: 10px; 
+    justify-content: center;
+}
+
+memory-square { 
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+}
+
+#startScreen, #gameScreen, #endScreen {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
